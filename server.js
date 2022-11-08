@@ -11,9 +11,7 @@ const connectDB =require("./config/db/dbConnect");
 const postRoute = require("./route/posts/postRoute");
 const categoryRoute = require("./route/category/categoryRoute");
 
-const commentRoutes = require("./route/comments/commentRoute");
-const conversationRoutes = require("./route/conversation/conversationRoute");
-const messageRoutes = require("./route/messages/messages");
+
 
 const app =express()
 
@@ -28,13 +26,8 @@ app.use("/api/posts",postRoute);
 // category Route
 app.use("/api/category",categoryRoute);
 
-//commentRoute
-app.use("/api/comments",commentRoutes)
-//conversationRoute
-app.use("/api/conversation",conversationRoutes)
 
-//messageRoute
-app.use("/api/message",messageRoutes);
+
 
 //error handler
 app.use(notFound )
